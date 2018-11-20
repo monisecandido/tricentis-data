@@ -60,7 +60,7 @@ public class ProductDataPage {
 		damageinsurance.sendKeys(value);
 	}
 
-	public void typeOptionalProducts() {
+	public void goOptionalProducts() {
 		optionalProducts.click();
 	}
 
@@ -68,7 +68,7 @@ public class ProductDataPage {
 		courtesycar.sendKeys(value);
 	}
 
-	public void typeNextSelectPriceOption() {
+	public void goNextSelectPriceOption() {
 		nextselectpriceoption.click();
 	}
 

@@ -63,8 +63,10 @@ public class SendQuotePage {
 		Comments.sendKeys(value);
 	}
 
-	public void typeSendEmail() {
+	public void goSendEmail() {
 		sendemail.click();
 	}
+	
+	
 
 }

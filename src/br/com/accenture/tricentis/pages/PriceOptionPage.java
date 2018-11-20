@@ -22,11 +22,11 @@ public class PriceOptionPage {
 	}
 	
 
-	public void typeSelectOption() {
+	public void goSelectOption() {
 		selectOption.click();
 	}
 
-	public void typeNextSendQuote() {
+	public void goNextSendQuote() {
 		nextsendquote.click();
 	}
 

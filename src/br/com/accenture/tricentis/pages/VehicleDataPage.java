@@ -90,7 +90,7 @@ public class VehicleDataPage {
 		numberofseats.sendKeys(value);
 	}
 
-	public void typeDateOfManufacture() {
+	public void goDateOfManufacture() {
 		dateOfManufacture.click();
 
 	}
@@ -129,7 +129,7 @@ public class VehicleDataPage {
 
 	}
 
-	public void typeNextEnterInsurantData() {
+	public void goNextEnterInsurantData() {
 		nextenterinsurantdata.click();
 
 	}

@@ -79,7 +79,7 @@ public class InsurantDataPage {
 		birthdate.sendKeys(value);
 	}
 
-	public void typeGender() {
+	public void goGender() {
 		gender.click();
 
 	}
@@ -104,7 +104,7 @@ public class InsurantDataPage {
 		occupation.sendKeys(value);
 	}
 
-	public void typeNormalizeSpace() {
+	public void goNormalizeSpace() {
 		normalizeSpace.click();
 	}
 
@@ -116,7 +116,7 @@ public class InsurantDataPage {
 		picture.sendKeys("");
 	}
 
-	public void typeNextEnterProductData() {
+	public void goNextEnterProductData() {
 		nextenterproductdata.click();
 	}
 

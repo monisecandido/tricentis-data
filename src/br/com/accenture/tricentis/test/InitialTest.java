@@ -26,6 +26,7 @@ public class InitialTest {
 	public void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
 		this.driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		this.uri = "http://sampleapp.tricentis.com/101/app.php";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
@@ -38,6 +39,7 @@ public class InitialTest {
 		testaProductData();
 		priceOption();	
 		sendQuot();
+		driver.close();
 		
 	}
 	
@@ -52,7 +54,7 @@ public class InitialTest {
 		vehicleDataPage.typeEngineperformance("100");
 		vehicleDataPage.typeOfManuFecture("11/15/2018");
 		vehicleDataPage.typeNumberOfSeats("1");
-		vehicleDataPage.typeDateOfManufacture();
+		vehicleDataPage.goDateOfManufacture();
 		vehicleDataPage.typeNumberOfSeatsMotorcycle("1");
 		vehicleDataPage.typeFuel("Gas");
 		vehicleDataPage.typePayload("500");
@@ -60,7 +62,7 @@ public class InitialTest {
 		vehicleDataPage.typeListPrice("10000");
 		vehicleDataPage.typeLicensePlateNumber("1212");
 		vehicleDataPage.typeAnnualMileage("112");
-    	vehicleDataPage.typeNextEnterInsurantData();		
+    	vehicleDataPage.goNextEnterInsurantData();		
 		
 		
 	}
@@ -73,16 +75,16 @@ public class InitialTest {
 		insurantDataPage.typeFirstName("Monise");
 		insurantDataPage.typeLastName("Candido");
 		insurantDataPage.typeBirthDate("10/20/1998");
-		insurantDataPage.typeGender();
+		insurantDataPage.goGender();
 		insurantDataPage.typeStreetAddress("123456");
 		insurantDataPage.typeCountry("Brazil");
 		insurantDataPage.typeZipCode("123456");
 		insurantDataPage.typeCity("Recife");
 		insurantDataPage.typeOccupation("Employee");
-		insurantDataPage.typeNormalizeSpace();
+		insurantDataPage.goNormalizeSpace();
 		insurantDataPage.typeWebSite("www.nise.com.br");
 		insurantDataPage.typePicture("");
-		insurantDataPage.typeNextEnterProductData();
+		insurantDataPage.goNextEnterProductData();
 
 	}
 	
@@ -95,9 +97,9 @@ public class InitialTest {
 		productDataPage.typeInsuranceSum("3.000.000,00");
 		productDataPage.typetypeMeritRating("Bonus 1");
 		productDataPage.typeDamageInsurance("No Coverage");
-		productDataPage.typeOptionalProducts();
+		productDataPage.goOptionalProducts();
 		productDataPage.typeCourtesyCar("No");
-		productDataPage.typeNextSelectPriceOption();
+		productDataPage.goNextSelectPriceOption();
 		
 		
 		
@@ -106,8 +108,8 @@ public class InitialTest {
 	public void priceOption() {
 		PriceOptionPage priceOptionPage = new PriceOptionPage(driver);
 		
-		priceOptionPage.typeSelectOption();
-		priceOptionPage.typeNextSendQuote();
+		priceOptionPage.goSelectOption();
+		priceOptionPage.goNextSendQuote();
 		
 	}
 	
@@ -122,7 +124,7 @@ public class InitialTest {
 		sendQuotePage.typePassword("Bla123");
 		sendQuotePage.typeConfirmPassword("Bla123");
 		sendQuotePage.typeComents("selenium selenium selenium");
-		sendQuotePage.typeSendEmail();
+		sendQuotePage.goSendEmail();
 		
 
 		WebElement resultMessage = driver.findElement(By.tagName("h2"));
