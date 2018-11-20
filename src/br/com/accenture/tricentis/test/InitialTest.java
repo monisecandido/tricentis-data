@@ -24,6 +24,7 @@ public class InitialTest {
 
 	@Before
 	public void setUp() throws Exception {
+		System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver.exe");
 		this.driver = new ChromeDriver();
 		this.uri = "http://sampleapp.tricentis.com/101/app.php";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
